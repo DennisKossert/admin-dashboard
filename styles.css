@@ -1,5 +1,5 @@
 :root {
-    --primary-clr: rgb(101, 170, 248);
+    --primary-clr: rgb(83, 153, 233);
     --secondary-clr: white;
     --bg-clr: lightgray;
     --accent-clr: rgb(255, 187, 0);
@@ -17,10 +17,68 @@ body {
     min-height: 100vh;
 }
 
+.container > * {
+    padding: 1rem;
+}
+
+/* --- */
+
 .nav {
     background-color: var(--primary-clr);
     grid-row: span 2;
 }
+
+h1 {
+    margin: 0;
+}
+
+/* --- */
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header > * {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+search form {
+    display: grid;
+    grid-template-columns: 5% 66%;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem 0;
+
+}
+
+search input {
+    width: 100%;
+    background-color: var(--bg-clr);
+}
+
+search button {
+    visibility: hidden;
+}
+
+.user-panel,
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+}
+
+.header button {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    height: 2.5rem;
+    width: 6rem;
+    border: 2px none;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+/* --- */
 
 main {
     display: grid;
