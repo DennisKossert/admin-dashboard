@@ -37,6 +37,7 @@ h1 {
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    font-weight: 700;
 }
 
 .header > * {
@@ -56,6 +57,8 @@ search form {
 search input {
     width: 100%;
     background-color: var(--bg-clr);
+    border-radius: 1rem;
+    border-style: none;
 }
 
 search button {
