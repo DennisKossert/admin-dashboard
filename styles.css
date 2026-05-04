@@ -3,12 +3,13 @@
     --secondary-clr: white;
     --bg-clr: rgb(224, 232, 240);
     --accent-clr: rgb(255, 187, 0);
+    line-height: 1.2;
 }
 
-body {
+body,
+h1,h2,h3,h4{
     margin: 0;
 }
-
 .container {
     background-color: var(--bg-clr);
     display: grid;
@@ -89,6 +90,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 1rem;
 }
 
 .projects-container {
@@ -112,22 +114,49 @@ main {
     grid-template-rows: 4fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem 1rem 2rem;
+    gap: 1rem;
 } 
+
+h3 {
+    margin-bottom: 0.2rem;
+}
 
 .card .content {
     grid-area: 1 / 1 / 2 / span 3;
 }
 
-.card h3 {
-    margin: 0;
-}
 .card .buttons {
     grid-column: -1 / -2;
 }
 
 .card,
-.announcements-container,
+.feed,
 .trend-item {
     background-color: var(--secondary-clr);
     border-radius: 0.5rem;
 }
+
+.feed {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem 1rem 2rem;
+    gap: 1rem;
+}
+
+.feed-text {
+    font-size: 12px;
+    padding-bottom: 1rem
+}
+
+.announcement {
+    border-bottom: 1px solid lightgray;
+    display: grid;
+}
+
+.announcement:last-child {
+    border: none;
+}
+
+
+
+/* */
