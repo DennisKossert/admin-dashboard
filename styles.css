@@ -1,7 +1,7 @@
 :root {
     --primary-clr: rgb(83, 153, 233);
     --secondary-clr: white;
-    --bg-clr: lightgray;
+    --bg-clr: rgb(224, 232, 240);
     --accent-clr: rgb(255, 187, 0);
 }
 
@@ -35,12 +35,14 @@ h1 {
 /* --- */
 
 .header {
+    background-color: var(--secondary-clr);
     display: grid;
     grid-template-rows: 1fr 1fr;
     font-weight: 700;
 }
 
 .header > * {
+    
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
@@ -100,11 +102,32 @@ main {
     padding: 1rem;
 }
 
+.card {
+    border-width: 0;
+    border-left-width: 0.5rem;
+    border-color: var(--accent-clr);
+    border-left-style: solid;
+    box-shadow: 0 0 0.5rem rgb(184, 184, 184);
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 1rem 2rem;
+} 
 
+.card .content {
+    grid-area: 1 / 1 / 2 / span 3;
+}
 
-.header, 
+.card h3 {
+    margin: 0;
+}
+.card .buttons {
+    grid-column: -1 / -2;
+}
+
 .card,
-.announcement,
+.announcements-container,
 .trend-item {
     background-color: var(--secondary-clr);
+    border-radius: 0.5rem;
 }
